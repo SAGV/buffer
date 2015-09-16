@@ -321,6 +321,10 @@ Buffer.concat = function concat (list, length) {
     }
   }
 
+  if (list.length === 1) {
+    return list[0];
+  }
+
   var buf = new Buffer(length)
   var pos = 0
   for (i = 0; i < list.length; i++) {
